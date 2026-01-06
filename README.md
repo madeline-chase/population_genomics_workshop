@@ -149,7 +149,7 @@ Finally, we can estimate and compare nucleotide diversity ($\pi$) for both popul
 
 After estimating $\pi$ for both populations, you can calculate the effective population size. 
 
-> *Hint:* recall that $\pi = 4*N_{e}*\mu$. The mutation rate ($\mu$) for this simulated data is $1e-8$
+*Hint:* recall that $\pi = 4*N_{e}*\mu$. The mutation rate ($\mu$) for this simulated data is $1e-8$
 
 Once you have calculated both $\pi$ and $N_{e}$, open the [google sheet](https://docs.google.com/spreadsheets/d/1KF2iWSUaplGBWBBPu52uN2AzxulBaczeuh5VUkOOKhE/edit?usp=sharing) for this exercise and add your estimates, as well as the average percentage of missing data that you calculated earlier.
 
