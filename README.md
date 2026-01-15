@@ -261,7 +261,7 @@ We can update the plot of the distribution from the beginning to indicate the lo
 
 ### 2.2 Estimating differentiation
 
-Before we move to analyze the hybrid individuals, let's analyze our new lineage in a bit more detail. You will estimate chromosome-wide differentiation (*$F_{ST}$*) between all pairs of the three lineages. This can be done using vcftools. We want to know the chromosome-wide average *$F_{ST}$*, but let's also estimate *$F_{ST}$* in genomic windows so that we can look at the variation across the chromosome. Use 200000 basepair non-overlapping windows. **First, you will have to generate sample files for each population, which you can get from the file `samp_info_pontic.txt` using `awk` or `grep`.** 
+Before we move to analyze the hybrid individuals, let's analyze our new lineage in a bit more detail. You will estimate chromosome-wide differentiation ($F_{ST}$) between all pairs of the three lineages. This can be done using vcftools. We want to know the chromosome-wide average $F_{ST}$, but let's also estimate $F_{ST}$ in genomic windows so that we can look at the variation across the chromosome. Use 200000 basepair non-overlapping windows. **First, you will have to generate sample files for each population, which you can get from the file `samp_info_pontic.txt` using `awk` or `grep`.** 
 
 <details>
     <summary>Code</summary>
@@ -278,7 +278,7 @@ From the output on your terminal you should look at the value `weighted  Fst est
 - Which pairs are the most closely related?
 - Does this result reflect what you observe in the PCA?
 
-Now let's look into the variation in *$F_{ST}$* across this chromosome between *melanoleuca* and *pleschanka*. Open the file `chr20_fst.mel_ple.w200k_s200k.windowed.weir.fst` in R and plot *$F_{ST}$* in windows. I have also provided you with estimates of recombination rate along this chromosome, which you can load as well to compare with *$F_{ST}$*.
+Now let's look into the variation in $F_{ST}$ across this chromosome between *melanoleuca* and *pleschanka*. Open the file `chr20_fst.mel_ple.w200k_s200k.windowed.weir.fst` in R and plot $F_{ST}$ in windows. I have also provided you with estimates of recombination rate along this chromosome, which you can load as well to compare with $F_{ST}$.
 
 ```R
 library(ggplot2)
@@ -307,8 +307,8 @@ geom_point()
 print(recom_plot)
 ```
 
-- How does variation in *$F_{ST}$* compare with variation in recombination rate?
-- Where do you see the largest *$F_{ST}$* values? What do you think these genomic regions might be?
+- How does variation in $F_{ST}$ compare with variation in recombination rate?
+- Where do you see the largest $F_{ST}$ values? What do you think these genomic regions might be?
 
 ### 2.3 Signatures of hybridization 
 
