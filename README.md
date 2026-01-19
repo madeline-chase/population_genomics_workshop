@@ -39,7 +39,7 @@ Change to the working directory for this exercise, `~/workshop_materials/populat
 
 ### 1.1 Generating the variant data
 
-Look at the contents of this directory. You will run the script `sim_2pop.py` to generate your variant data. This script runs a backwards-in-time simulation, using the software [msprime](https://tskit.dev/msprime/docs/stable/intro.html#) to generate variant call data for two populations, A and B, based on a user specified demographic history. 
+Look at the contents of this directory. You will run the script `sim_2pop.py` to generate your variant data. This script runs a backwards-in-time simulation, using the software [msprime](https://tskit.dev/msprime/docs/stable/intro.html#) to generate variant call data for two populations, A and B, based on a user specified demographic history. Look into the script and see if you understand what the different sections of code are doing, and then run the script.
 
 
 <details>
@@ -53,7 +53,7 @@ Look at the contents of this directory. You will run the script `sim_2pop.py` to
 
 Once the script has run, look in the contents of the directory again, and you should now see the file `sim_data_2pop.vcf.gz`
 
-Examine the vcf file to answer the following questions:
+Examine the vcf file to answer the following questions. To look at the vcf without unzipping it, you can use the command `zcat` and pipe this into `less`.
 
 - How many individuals are there in each population? *Hint: The population IDs are **A** and **B**.*
 - How many variable sites are there in the vcf?
@@ -117,7 +117,7 @@ bar_data <- data.frame('derived_counts' = c(pop_counts$DerivedA, pop_counts$Deri
 ## Plot population SFS side by side for A and B
 sfs_plot <- ggplot(data=bar_data, aes(x=derived_counts, fill = popID))+
 # Plot only from singletons and above
-xlim(1,40)+
+xlim(1,20)+
 geom_histogram(position='dodge')
 
 print(sfs_plot)
