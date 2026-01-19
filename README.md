@@ -131,7 +131,7 @@ Based on your SFS results, answer the following questions:
 
 ### 1.4 Estimate diversity and effective population size
 
-Finally, we can estimate and compare nucleotide diversity ($\pi$) for both populations. You can calculate $\pi$ from the allele counts for both populations. To estimate the per site $\pi$, you can use the formula $\Sigma(2*p*q)/L$ where *L* is the total length of the sequence, including invariant sites. In this case, you can use 100000 as L (the length of sequence we simulated). 
+Finally, we can estimate and compare nucleotide diversity ($\pi$) for both populations. You can calculate $\pi$ from the allele counts for both populations. To estimate the per site $\pi$, you can use the formula $\Sigma(2pq)/L$ where *L* is the total length of the sequence, including invariant sites. In this case, you can use 100000 as L (the length of sequence we simulated). 
 
 <details>
     <summary>Code</summary>
