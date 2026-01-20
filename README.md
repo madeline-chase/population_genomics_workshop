@@ -272,7 +272,7 @@ Before we move to analyze the hybrid individuals, let's analyze our new lineage 
 <details>
     <summary>Code</summary>
 
-    vcftools --gzvcf chr20.mel_ple_hyb.vcf.gz --weir-fst-pop mel_pop.txt --weir-fst-pop ple_pop.txt --fst-window-size 200000 --fst-window-step 200000 --out chr20_fst.mel_ple.w200k.s200k
+    vcftools --gzvcf chr20.mel_ple_hyb.vcf.gz --weir-fst-pop mel_pop.txt --weir-fst-pop ple_pop.txt --fst-window-size 200000 --fst-window-step 200000 --out chr20_fst.mel_ple.w200k_s200k
 
 </details>  
   
