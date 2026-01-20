@@ -119,7 +119,7 @@ pop_counts$Derived_freqB <- pop_counts$DerivedB/(pop_counts$DerivedB + pop_count
 bar_data <- data.frame('derived_freq' = c(pop_counts$Derived_freqA, pop_counts$Derived_freqB), 'popID' = c(rep('A', nrow(pop_counts)), rep('B', nrow(pop_counts))))
 
 ## Remove sites that are fixed for ancestral allele
-bar_data_subset <- bar_data[bar_data$derived_counts>0,]
+bar_data_subset <- bar_data[bar_data$derived_freq>0,]
 
 ## Plot population SFS side by side for A and B
 sfs_plot <- ggplot(data=bar_data_subset, aes(x=derived_freq, fill = popID))+
