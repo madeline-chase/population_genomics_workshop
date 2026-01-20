@@ -311,7 +311,7 @@ ylim(0,1)
 recom_plot <- ggplot(data=recom_data, aes(x=midpt, y=cm.mb))+
 geom_point()
 
-plot_grid(fst_plot, recom_plot, nrow=2)
+plot_grid(fst_plot_mel_ple, recom_plot, nrow=2)
 ```
 
 - How does variation in $F_{ST}$ compare with variation in recombination rate?
