@@ -288,6 +288,7 @@ Now let's look into the variation in $F_{ST}$ across this chromosome between *me
 
 ```R
 library(ggplot2)
+library(cowplot)
 
 # Load fst data
 fst_mel_ple <- read.table('chr20_fst.mel_ple.w200k_s200k.windowed.weir.fst', header = T)
@@ -304,13 +305,13 @@ fst_plot_mel_ple <- ggplot(data=fst_mel_ple, aes(x=midpt, y=WEIGHTED_FST))+
 geom_point()+
 ylim(0,1)
 
-print(fst_plot_mel_ple)
+
 
 # Plot recombination rate along the chromosome
 recom_plot <- ggplot(data=recom_data, aes(x=midpt, y=cm.mb))+
 geom_point()
 
-print(recom_plot)
+plot_grid(fst_plot, recom_plot, nrow=2)
 ```
 
 - How does variation in $F_{ST}$ compare with variation in recombination rate?
