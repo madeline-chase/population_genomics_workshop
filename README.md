@@ -111,13 +111,19 @@ library(ggplot2)
 pop_counts <- read.table('pop_allele_counts.txt', header = T, sep = '\t')
 head(pop_counts)
 
+## Convert derived counts into allele frequency
+pop_counts$Derived_freqA <- pop_counts$DerivedA/(pop_counts$DerivedA + pop_counts$AncestralA)
+pop_counts$Derived_freqB <- pop_counts$DerivedB/(pop_counts$DerivedB + pop_counts$AncestralB)
+
 ## Restructure data for barplot
-bar_data <- data.frame('derived_counts' = c(pop_counts$DerivedA, pop_counts$DerivedB), 'popID' = c(rep('A', nrow(pop_counts)), rep('B', nrow(pop_counts))))
+bar_data <- data.frame('derived_freq' = c(pop_counts$Derived_freqA, pop_counts$Derived_freqB), 'popID' = c(rep('A', nrow(pop_counts)), rep('B', nrow(pop_counts))))
+
+## Remove sites that are fixed for ancestral allele
+bar_data_subset <- bar_data[bar_data$derived_counts>0,]
 
 ## Plot population SFS side by side for A and B
-sfs_plot <- ggplot(data=bar_data, aes(x=derived_counts, fill = popID))+
-# Plot only from singletons and above
-xlim(1,20)+
+sfs_plot <- ggplot(data=bar_data_subset, aes(x=derived_freq, fill = popID))+
+xlim(0,1)+
 geom_histogram(position='dodge')
 
 print(sfs_plot)
